@@ -60,27 +60,15 @@
 						<!--						<img src="--><?php //echo get_option( 'site_logo_src', '' ) ?><!--"/>-->
 						<picture>
 							<source srcset="<?php
-							$option = get_option( 'logo_srcs', '' );
-							if ( $option !== '' ) {
-								$option = $option['desktop'];
-							}
-							echo $option;
+							echo(al_get_proper_logo('desktop'));
 							?>"
 									media="(min-width: 992px)">
 							<source srcset="<?php
-							$option = get_option( 'logo_srcs', '');
-							if($option !== ''){
-								$option = $option['tablet'];
-							}
-							echo $option;
+							echo(al_get_proper_logo('tablet'));
 							?>"
 									media="(min-width: 768px)">
 							<source srcset="<?php
-							$option = get_option( 'logo_srcs', '');
-							if($option !== ''){
-								$option = $option['mobile'];
-							}
-							echo $option;
+							echo(al_get_proper_logo('mobile'));
 							?>"
 									media="(min-width: 480px)">
 							<img src="" alt=""/>
