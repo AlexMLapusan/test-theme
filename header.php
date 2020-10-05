@@ -59,18 +59,7 @@
 					<div class="header-titles">
 						<!--						<img src="--><?php //echo get_option( 'site_logo_src', '' ) ?><!--"/>-->
 						<picture>
-							<source srcset="<?php
-							echo(al_get_proper_logo('desktop'));
-							?>"
-									media="(min-width: 992px)">
-							<source srcset="<?php
-							echo(al_get_proper_logo('tablet'));
-							?>"
-									media="(min-width: 768px)">
-							<source srcset="<?php
-							echo(al_get_proper_logo('mobile'));
-							?>"
-									media="(min-width: 480px)">
+							<?php echo al_get_proper_logo(); ?>
 							<img src="" alt=""/>
 						</picture>
 						<?php
